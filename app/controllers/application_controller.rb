@@ -6,7 +6,5 @@ class ApplicationController < ActionController::API
         render json: { count: session[:count] }
       end
 
-      get '*path',
-      to: 'fallback#index',
-      constraints: ->(req) { !req.xhr? && req.format.html? }
+     
 end
